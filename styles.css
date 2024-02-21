@@ -98,6 +98,12 @@ header::after{
     display: flex;
     margin-left: 200px;
     position: relative;
+    font-size: 2rem;
+    color: #fff;
+    
+}
+#checkbox{
+    display: none;
 }
 
 .Search input{
@@ -109,32 +115,37 @@ header::after{
     color: #fff;
     font-size: 17px;
     font-weight: 500;
-    outline: 3px, solid, transparent;
+    outline: 1.5px, solid, transparent;
     transition: .2s;
 }
 
 .Search input:focus{
-    outline: 3px solid white;
+    outline: 1.5px solid white;
 }
 
 .Search input::placeholder{
     color: #ffffff;
     font-weight: 500;
+    opacity: calc(80%);
 }
 
-.Search i{
+.Search #Search{
     position: absolute;
     right: 15px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-34%);
     font-size: 20px;
     color: rgb(255, 255, 255);
+    font-weight: 650;
 }
-
-#checkbox{
+.Search #SearchMobile{
+    display: none;
+    font-weight: 0;
+    cursor: pointer;
+}
+.SearchMobile{
     display: none;
 }
-
 @media (max-width:992px){
     
     .header {
@@ -165,7 +176,7 @@ header::after{
     .logo{
         position: absolute;
         top: 0;
-        left: 80px;
+        left: 20px;
         width: 100%;
         height: 100%;
         display: flex;
@@ -203,43 +214,63 @@ header::after{
 
 }
 .imagelogo{
-        position: absolute;
-        margin-left: -20px;
-        justify-content: center;
+        display: none;
         
     }
 
     .icons{
-        display: inline-flex;
+        display: block;
     }
     .icons #Close{
         display: none;
     }
     .Search input{
         display: none;
-        width: 100%;
-        top: 0;
-        left: 0;
     }
-    #checkbox{
+    
+    .Search #Search{
+        display: none;
+    }
+    /* .Search #SearchMobile{
+        position: relative;
         display: block;
-        margin-left: 120px;
-        /* position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex; */
-    }
-    /* .Search{
-        position: absolute;
-        left: 0;
-        top: 100%;
-        width: 100%;
-        height: 3.1rem;
-        background: rgba(255, 255, 255, .3);
-        backdrop-filter: blur(5px);
-        overflow: hidden;
-        transition: .3s ease;
+        font-size: 2rem;
+        margin-left: 200px;
+        font-size: 1.8rem;
+        margin-right: 100px;
     } */
+    .SearchMobile{
+        position: absolute;
+        display: flex;
+        right: 60px;
+
+    }
+    .SearchMobile input{
+        background: rgba(0, 0, 0, 0.11);
+        border-radius: 30px;
+        border: none;
+        padding: 5px;
+        position: relative;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        outline: 1.5px, solid, transparent;
+        transition: .2s;
+    }
+    .SearchMobile input::placeholder{
+        color: #ffffff;
+        font-weight: 500;
+        opacity: calc(80%);
+    }
+    .SearchMobile i{
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        font-weight: 555;
+    }
+
+
 }
